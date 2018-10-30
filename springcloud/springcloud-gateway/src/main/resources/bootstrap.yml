@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /gateway
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: baidu
+        uri: http://baidu.com
+        predicates:
+        - Path=/baidu/**
