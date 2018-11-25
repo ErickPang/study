@@ -1,0 +1,33 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/erickwhx/study/tree/master/springcloud/
+          username: ErickPang
+          password: PANG!#71shan
+          search-paths: config-repo
+          force-pull: true
+          clone-on-start: true
+
+      #本地文件访问方式
+#       native:
+#          search-locations: classpath:config
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        health-check-interval: 5s
+        health-check-path: /actuator/health
+  #访问加密
+#  security:
+#    user:
+#      password: userpwd
+#      name: user
