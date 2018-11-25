@@ -9,9 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/erickwhx/study/tree/master/springcloud/
-          username: ErickPang
-          password: PANG!#71shan
+          uri: https://github.com/ErickPang/study/tree/master/springcloud
           search-paths: config-repo
           force-pull: true
           clone-on-start: true
